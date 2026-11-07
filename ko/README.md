@@ -6,6 +6,12 @@
 
 **라이브 데모:** https://mivork.github.io/life-log/
 
+## 스크린샷
+
+![기록 탭](../docs/images/record.png)
+
+![분석 탭 (더미 샘플 데이터)](../docs/images/analysis.png)
+
 ## 주요 기능
 
 - **종합 일일 기록** — 수면, 체중, 식사, 운동, 스킨케어 루틴, 정신 건강 점수, 지출, 자유 형식 일기

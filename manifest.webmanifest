@@ -1,1 +1,9 @@
-{"background_color":"#ffffff","description":"自分専用の生活サポート＆ライフログ（データはブラウザ内のみ）","display":"standalone","icons":[{"purpose":"any","sizes":"any","src":"icon.svg","type":"image/svg+xml"}],"name":"ライフログ","scope":"./","short_name":"ライフログ","start_url":"./index.html","theme_color":"#111318"}
+{
+  "name": "ライフログ",
+  "short_name": "ライフログ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5e6ad2",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

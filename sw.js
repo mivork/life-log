@@ -1,24 +1,8 @@
-// Service Worker: ページはネットワーク優先＋キャッシュフォールバック、
-// 静的アセットはキャッシュ優先でオフラインでも記録画面を開けるようにする。
-const CACHE_NAME = "lifelog-v8";
-const CORE_ASSETS = [
-  "./",
-  "./index.html",
-  "./css/style.css",
-  "./css/tokens.css",
-  "./css/base.css",
-  "./js/main.js",
-  "./manifest.webmanifest",
-  "./icon.svg"
-];
-
+// LifeLog v2 service worker: network-first pages, cache-first hashed assets.
+const CACHE_NAME = "lifelog2-v1";
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS))
-  );
   self.skipWaiting();
 });
-
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -27,7 +11,6 @@ self.addEventListener("activate", (event) => {
   );
   self.clients.claim();
 });
-
 self.addEventListener("fetch", (event) => {
   const req = event.request;
   if (req.method !== "GET") return;

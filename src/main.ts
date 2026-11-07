@@ -70,6 +70,8 @@ const i18n: Record<Lang, I18nDict> = {
     lang_label: "言語",
     tab_record: "記録",
     tab_analysis: "分析",
+    slide_prev: "前のセクションへ",
+    slide_next: "次のセクションへ",
     panel_record_title: "1日の記録",
     fs_date: "日付",
     label_date: "日付（必須）",
@@ -211,6 +213,8 @@ const i18n: Record<Lang, I18nDict> = {
     lang_label: "Lang",
     tab_record: "Record",
     tab_analysis: "Analysis",
+    slide_prev: "Previous section",
+    slide_next: "Next section",
     panel_record_title: "Daily Record",
     fs_date: "Date",
     label_date: "Date (required)",
@@ -352,6 +356,8 @@ const i18n: Record<Lang, I18nDict> = {
     lang_label: "언어",
     tab_record: "기록",
     tab_analysis: "분석",
+    slide_prev: "이전 섹션",
+    slide_next: "다음 섹션",
     panel_record_title: "하루의 기록",
     fs_date: "날짜",
     label_date: "날짜 (필수)",
@@ -1103,12 +1109,62 @@ function renderAnalysis(): void {
   wrap.appendChild(table);
 }
 
-// ---------- tabs ----------
-function switchTab(which: "record" | "analysis"): void {
-  const isRecord = which === "record";
-  el<HTMLElement>("panel-record").hidden = !isRecord;
-  el<HTMLElement>("panel-analysis").hidden = isRecord;
-  if (!isRecord) renderAnalysis();
+// ---------- slides ----------
+const SLIDE_KEYS = [
+  "context",
+  "health",
+  "care",
+  "activity",
+  "diary",
+  "list",
+  "data",
+  "analysis",
+] as const;
+const SLIDE_NAME_KEYS = [
+  "nav_context",
+  "nav_health",
+  "nav_care",
+  "nav_activity",
+  "nav_diary",
+  "nav_list",
+  "nav_data",
+  "tab_analysis",
+];
+let currentSlide = 0;
+
+function showSlide(index: number): void {
+  currentSlide = Math.max(0, Math.min(SLIDE_KEYS.length - 1, index));
+  el<HTMLElement>("stage-track").style.transform =
+    "translateX(-" + currentSlide * 100 + "%)";
+  document
+    .querySelectorAll<HTMLElement>(".slide")
+    .forEach((s, i) =>
+      s.setAttribute("aria-hidden", String(i !== currentSlide))
+    );
+  document
+    .querySelectorAll<HTMLElement>(".tree__item")
+    .forEach((b) =>
+      b.classList.toggle(
+        "is-active",
+        Number(b.dataset.slideIndex) === currentSlide
+      )
+    );
+  el<HTMLElement>("slide-name").textContent = t(
+    SLIDE_NAME_KEYS[currentSlide]
+  );
+  el<HTMLButtonElement>("slide-prev").disabled = currentSlide === 0;
+  el<HTMLButtonElement>("slide-next").disabled =
+    currentSlide === SLIDE_KEYS.length - 1;
+  el<HTMLButtonElement>("slide-prev").setAttribute(
+    "aria-label",
+    t("slide_prev")
+  );
+  el<HTMLButtonElement>("slide-next").setAttribute(
+    "aria-label",
+    t("slide_next")
+  );
+  el<HTMLElement>("action-form").hidden = currentSlide > 4;
+  if (SLIDE_KEYS[currentSlide] === "analysis") renderAnalysis();
 }
 
 // ---------- import / export ----------
@@ -1253,36 +1309,28 @@ function loadSample(): void {
   el<HTMLElement>("data-status").textContent = t("status_sample");
 }
 
-// ---------- side nav ----------
-function initSideNav(): void {
-  const navAnalysis = document.getElementById("nav-analysis");
-  if (navAnalysis) {
-    navAnalysis.addEventListener("click", (ev) => {
-      ev.preventDefault();
-      switchTab("analysis");
-      el<HTMLElement>("panel-analysis").scrollIntoView({ behavior: "smooth" });
-    });
-  }
-
-  // Record-tab section links: ensure record tab is active, then scroll
-  const sideNav = document.getElementById("side-nav");
-  if (sideNav) {
-    sideNav.querySelectorAll<HTMLAnchorElement>("a.side-nav__link").forEach(
-      (link) => {
-        if (link.id === "nav-analysis") return;
-        link.addEventListener("click", (ev) => {
-          ev.preventDefault();
-          switchTab("record");
-          const target = document.querySelector(
-            link.getAttribute("href") || ""
-          );
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
+// ---------- tree nav + slide controls ----------
+function initSlides(): void {
+  document
+    .querySelectorAll<HTMLElement>(".tree__item")
+    .forEach((b) =>
+      b.addEventListener("click", () =>
+        showSlide(Number(b.dataset.slideIndex))
+      )
     );
-  }
+  const toggle = el<HTMLElement>("tree-record-toggle");
+  const children = el<HTMLElement>("tree-record-children");
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    children.classList.toggle("is-collapsed", expanded);
+  });
+  el<HTMLElement>("slide-prev").addEventListener("click", () =>
+    showSlide(currentSlide - 1)
+  );
+  el<HTMLElement>("slide-next").addEventListener("click", () =>
+    showSlide(currentSlide + 1)
+  );
 }
 
 // ---------- init ----------
@@ -1296,13 +1344,14 @@ function init(): void {
     localStorage.setItem(LANG_KEY, currentLang);
     applyI18n();
     renderList();
-    if (!el<HTMLElement>("panel-analysis").hidden) renderAnalysis();
+    showSlide(currentSlide);
   });
 
   records = loadRecords();
   resetForm();
   renderList();
-  initSideNav();
+  initSlides();
+  showSlide(0);
 
   el<HTMLFormElement>("record-form").addEventListener("submit", (ev) => {
     ev.preventDefault();
@@ -1340,7 +1389,7 @@ function init(): void {
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", () => {
-      if (!el<HTMLElement>("panel-analysis").hidden) renderAnalysis();
+      if (SLIDE_KEYS[currentSlide] === "analysis") renderAnalysis();
     });
 
   if ("serviceWorker" in navigator) {

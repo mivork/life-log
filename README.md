@@ -1,67 +1,96 @@
-# ライフログ ― 生活サポート＆ライフログ Webサイト
+# LifeLog — Personal Life Support & Life Logging
 
-自分専用の生活サポート＆ライフログ。多言語・多層アーキテクチャで構築し、
-記録はブラウザ内（localStorage）にのみ保存するローカルファースト設計です。
+[English](README.md) | [日本語](ja/README.md) | [한국어](ko/README.md)
 
-公開URL: https://mivork.github.io/life-log/
+A privacy-first life logging web app that tracks your daily habits, health, and spending — all stored locally in your browser. No server, no account, no data collection.
 
-## 構成
+**Live Demo:** https://mivork.github.io/life-log/
 
-| 層 | 技術 | 場所 | 役割 |
+## Features
+
+- **Complete daily tracking** — Sleep, weight, meals, exercise, skincare routine, mental health scores, spending, and free-form journaling
+- **Visual analytics** — Weight trends, sleep patterns, condition/mental score charts, and sleep-vs-next-day-condition scatter plots with correlation analysis (presented as hypotheses, not conclusions)
+- **Day-type breakdown** — Compare averages across school days, remote days, work days, and days off
+- **100% local storage** — All data stays in your browser's localStorage. Nothing is sent to any server
+- **JSON import/export** — Back up and restore your data in a portable `data.json` (schema v1) format
+- **PWA ready** — Add to your home screen for an app-like experience
+- **Multi-language UI** — English, Japanese, and Korean
+
+## Architecture
+
+| Layer | Tech | Location | Role |
 |---|---|---|---|
-| フロントエンド | TypeScript / HTML / CSS / Chart.js | `index.html`, `src/`, `css/`, `js/` | 「記録」「分析」2タブUI。GitHub Pages で公開、認証なし |
-| 分析エンジン | Python (pandas) | `tools/analysis/` | data.json から週次サマリー（相関は仮説表現・n数・注意書き付き）を生成 |
-| 同期ツール | Go | `tools/sync-go/` | data.json のスキーマ検証とプライベートrepoへの同期（既定 dry-run） |
-| 検証・暗号化 | Rust / WASM | `tools/wasm-crypto/` | レコード検証と Argon2id + AES-256-GCM によるローカル暗号化（Phase 4） |
-| 自動化 | Shell / Lua | `scripts/`, `rules/` | 検証→分析→コミットの一括実行と、条件分岐ルールの外部記述 |
-| ネイティブ拡張 | Kotlin（将来） | `docs/future-kotlin.md` | モバイル展開の拡張メモのみ |
+| Frontend | TypeScript / HTML / CSS / Chart.js | `index.html`, `src/`, `css/`, `js/` | Two-tab UI (Record / Analysis). Hosted on GitHub Pages, no auth required |
+| Analysis Engine | Python (pandas) | `tools/analysis/` | Generates weekly summaries from data.json (correlation as hypothesis, with n-count and caveats) |
+| Sync Tool | Go | `tools/sync-go/` | Schema validation and sync to a private repo (dry-run by default) |
+| Validation & Encryption | Rust / WASM | `tools/wasm-crypto/` | Record validation and local encryption with Argon2id + AES-256-GCM (Phase 4) |
+| Automation | Shell / Lua | `scripts/`, `rules/` | Batch execution: validate, analyze, commit. Conditional branching via external rule files |
+| Native Extension | Kotlin (future) | `docs/future-kotlin.md` | Mobile expansion notes only |
 
-## フロントエンドの使い方
+## Usage
 
-- 「記録」タブ: 日付を選んでその日の記録を入力・保存。同じ日付は上書き編集、一覧から編集/削除ができます。
-  記録範囲はスキーマ全項目（生活・環境 / ヘルスケア / 美容・セルフケア / 運動・支出 / 日記）です。
-- 「分析」タブ: 体重推移、睡眠時間、体調・メンタルスコア推移、睡眠×翌日体調の散布図と相関、記録率、日種別サマリーを Chart.js で表示します。
-- データの入出力: data.json スキーマ v1 形式でエクスポート/インポートできます（同日付は上書き）。
-- 保存先はブラウザの localStorage（キー `lifelog.records.v1`）のみ。サーバーへは送信されません。
-- PWA 対応（manifest + Service Worker）でホーム画面に追加できます。
+### Record Tab
 
-## データの置き場所と安全ルール（最重要）
+Select a date and enter your daily log. The form covers:
 
-1. **この公開リポジトリには実データを絶対に入れません。** コードとダミーサンプルだけを置きます。
-2. 実データ `data.json` はプライベートリポジトリ（または端末内の非公開フォルダ）にのみ置きます（`.gitignore` でも除外済み）。
-3. トークン類はコードに埋め込みません。同期ツールの push 認証は利用者の git 設定に委ねます。
-4. サンプルデータ（フロント内の「ダミーサンプル」ボタン、`tools/analysis/sample-data.json`）はすべて明確なダミー値で、実データではありません。
+- **Life & Environment** — Schedule type, location (out/home/mixed), weather, notes
+- **Healthcare** — Weight, sleep hours, bathing, meals (breakfast/lunch/dinner), condition score (1–5), mental score (1–5), stress level (1–5)
+- **Beauty & Self-care** — Face wash, skincare, teeth brushing (morning/night), water intake, caffeine, snacks
+- **Exercise & Spending** — Exercise details, ab workout video selection (A–G), long walks, rough spending with tags
 
-## 開発手順
+Same-date entries are overwritten. You can edit or delete any record from the list below the form.
+
+### Analysis Tab
+
+- **Summary cards** — Total days recorded, recording rate, average sleep, weight change (first to last)
+- **Charts** — Weight trend (line), sleep duration (bar), condition & mental scores (line), sleep vs. next-day condition (scatter with Pearson r)
+- **Day-type summary table** — Average sleep, condition, and mental scores grouped by schedule type
+
+### Data Import/Export
+
+Export or import in `data.json` schema v1 format. Same-date records are overwritten on import.
+
+## Data Safety Rules (Critical)
+
+1. **Never put real data in this public repository.** Only code and dummy samples belong here.
+2. Real `data.json` files go in a private repository or a non-public local folder (also excluded via `.gitignore`).
+3. No tokens or credentials are embedded in the code. The sync tool's push authentication relies on the user's own git configuration.
+4. All sample data (the "Load dummy sample" button on the frontend, `tools/analysis/sample-data.json`) contains clearly dummy values and is not real data.
+
+## Development
 
 ```bash
-# フロントエンド (TypeScript をコンパイル)
+# Frontend (compile TypeScript)
 npx -p typescript tsc -p tsconfig.json   # src/main.ts -> js/main.js
 
-# ローカル確認
+# Local preview
 python3 -m http.server 8000              # http://localhost:8000/
 
-# Python 分析（サンプルで動作確認）
+# Python analysis (verify with sample data)
 python3 tools/analysis/analyze.py tools/analysis/sample-data.json --out /tmp/lifelog-summary
 
-# Go 同期（検証 + dry-run が既定）
+# Go sync (validation + dry-run by default)
 cd tools/sync-go && go run . --data /path/to/data.json --repo /path/to/private-repo
 
-# 自動化（一括: 検証 → 分析 → コミット。既定 dry-run）
+# Automation (batch: validate -> analyze -> commit; dry-run by default)
 LIFELOG_DATA=/path/to/data.json LIFELOG_REPO=/path/to/private-repo scripts/auto-commit.sh
 ```
 
-## コーディング規約
+## Coding Conventions
 
-- インラインCSS / インラインJS 禁止（外部ファイルのみ）
-- CSS は `css/tokens.css` + `css/base.css` を `css/style.css` が `@import` で統合
-- BEM 命名、セマンティックHTML、WCAG 2.2 AA 配慮（フォーカス可視・コントラスト・ラベル紐付け）
+- No inline CSS or inline JS — external files only
+- CSS uses `css/tokens.css` + `css/base.css`, unified via `@import` in `css/style.css`
+- BEM naming, semantic HTML, WCAG 2.2 AA considerations (visible focus, contrast, label association)
 
-## フェーズ状況
+## Phase Status
 
-- Phase 0: スキーマ v1 確定、安全設計（データ到達経路 = JSON入出力 + ブラウザ内保存で開始）
-- Phase 1: フロントMVP 完了（本リポジトリ）
-- Phase 2: Python 分析エンジン 完了（サンプルで生成確認済み）
-- Phase 3: Go 同期ツール 同梱（既定 dry-run、向き先は設定で差し替え可能）
-- Phase 4: Rust/WASM 本体を用意。フロント連携は `docs/phase4-wasm.md` の設計メモ参照
-- Phase 5: Shell/Lua 自動化 同梱。Kotlin は将来展望メモのみ
+- Phase 0: Schema v1 finalized, safety design (data path = JSON I/O + browser-only storage)
+- Phase 1: Frontend MVP complete (this repository)
+- Phase 2: Python analysis engine complete (verified with sample data)
+- Phase 3: Go sync tool included (dry-run by default, target configurable)
+- Phase 4: Rust/WASM core prepared. Frontend integration design in `docs/phase4-wasm.md`
+- Phase 5: Shell/Lua automation included. Kotlin is future-outlook notes only
+
+## License
+
+MIT

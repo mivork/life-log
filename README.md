@@ -2,9 +2,20 @@
 
 [English](README.md) | [日本語](ja/README.md) | [한국어](ko/README.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://mivork.github.io/life-log/)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![No Backend](https://img.shields.io/badge/Backend-None%20(local%20only)-success)
+
 A privacy-first life logging web app that tracks your daily habits, health, and spending — all stored locally in your browser. No server, no account, no data collection.
 
 **Live Demo:** https://mivork.github.io/life-log/
+
+## Screenshots
+
+![Record tab](docs/images/record.png)
+
+![Analysis tab (dummy sample data)](docs/images/analysis.png)
 
 ## Features
 

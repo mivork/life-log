@@ -1,25 +1,55 @@
 :root {
+  /* ===== Color — Light ===== */
   --color-bg: #ffffff;
-  --color-surface: #f4f6f8;
-  --color-surface-strong: #e8edf2;
-  --color-text: #17222e;
-  --color-text-sub: #3d4c5c;
-  --color-primary: #084c8d;
-  --color-primary-dark: #063a6d;
-  --color-accent: #0b6e4f;
+  --color-surface: #f7f6f3;
+  --color-surface-2: #eeece8;
+  --color-text: #1b1b18;
+  --color-text-muted: #6f6e69;
+  --color-accent: #5e6ad2;
+  --color-accent-hover: #4f5bc0;
+  --color-focus: rgba(94, 106, 210, 0.25);
+  --color-primary: #171717;
+  --color-primary-hover: #2e2e2e;
   --color-danger: #b3261e;
-  --color-border: #9db2c4;
-  --color-focus: #b35c00;
-  --chart-1: #084c8d;
-  --chart-2: #0b6e4f;
-  --chart-3: #8a5a00;
+  --color-border: #e6e4df;
+  --chart-1: #5e6ad2;
+  --chart-2: #9aa3b2;
+  --chart-3: #6f6e69;
+
+  /* ===== Spacing ===== */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
+
+  /* ===== Shape ===== */
   --radius: 0.5rem;
-  --font-base: 1rem;
-  --max-width: 62rem;
+  --radius-lg: 0.625rem;
+
+  /* ===== Typography ===== */
+  --font-base: 0.9375rem;
+
+  --max-width: 57.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0e1116;
+    --color-surface: #151920;
+    --color-surface-2: #1b202a;
+    --color-text: #e8eaed;
+    --color-text-muted: #9aa3b2;
+    --color-accent: #828df0;
+    --color-accent-hover: #9ba4f5;
+    --color-focus: rgba(130, 141, 240, 0.25);
+    --color-primary: #ffffff;
+    --color-primary-hover: #e0e0e0;
+    --color-danger: #f2716a;
+    --color-border: #262c38;
+    --chart-1: #828df0;
+    --chart-2: #9aa3b2;
+    --chart-3: #6a7080;
+  }
 }

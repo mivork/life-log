@@ -1004,8 +1004,6 @@ function renderAnalysis() {
 // ---------- tabs ----------
 function switchTab(which) {
     const isRecord = which === "record";
-    el("tab-record").setAttribute("aria-selected", String(isRecord));
-    el("tab-analysis").setAttribute("aria-selected", String(!isRecord));
     el("panel-record").hidden = !isRecord;
     el("panel-analysis").hidden = isRecord;
     if (!isRecord)
@@ -1222,8 +1220,6 @@ function init() {
         resetForm();
         el("form-status").textContent = t("status_new");
     });
-    el("tab-record").addEventListener("click", () => switchTab("record"));
-    el("tab-analysis").addEventListener("click", () => switchTab("analysis"));
     el("btn-export").addEventListener("click", exportJson);
     el("btn-sample").addEventListener("click", loadSample);
     el("file-import").addEventListener("change", (ev) => {

@@ -7,6 +7,12 @@
 
 公開URL: https://mivork.github.io/life-log/
 
+## スクリーンショット
+
+![記録タブ](../docs/images/record.png)
+
+![分析タブ（ダミーサンプル表示中）](../docs/images/analysis.png)
+
 ## 構成
 
 | 層 | 技術 | 場所 | 役割 |

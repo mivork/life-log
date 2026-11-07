@@ -1106,11 +1106,6 @@ function renderAnalysis(): void {
 // ---------- tabs ----------
 function switchTab(which: "record" | "analysis"): void {
   const isRecord = which === "record";
-  el<HTMLElement>("tab-record").setAttribute("aria-selected", String(isRecord));
-  el<HTMLElement>("tab-analysis").setAttribute(
-    "aria-selected",
-    String(!isRecord)
-  );
   el<HTMLElement>("panel-record").hidden = !isRecord;
   el<HTMLElement>("panel-analysis").hidden = isRecord;
   if (!isRecord) renderAnalysis();
@@ -1333,12 +1328,6 @@ function init(): void {
     resetForm();
     el<HTMLElement>("form-status").textContent = t("status_new");
   });
-  el<HTMLElement>("tab-record").addEventListener("click", () =>
-    switchTab("record")
-  );
-  el<HTMLElement>("tab-analysis").addEventListener("click", () =>
-    switchTab("analysis")
-  );
   el<HTMLElement>("btn-export").addEventListener("click", exportJson);
   el<HTMLElement>("btn-sample").addEventListener("click", loadSample);
   el<HTMLInputElement>("file-import").addEventListener("change", (ev) => {

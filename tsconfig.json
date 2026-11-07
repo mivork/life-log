@@ -1,0 +1,1 @@
+{"compilerOptions":{"forceConsistentCasingInFileNames":true,"lib":["ES2020","DOM","DOM.Iterable"],"module":"es2015","outDir":"js","rootDir":"src","strict":true,"target":"ES2020"},"include":["src"]}

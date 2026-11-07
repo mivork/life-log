@@ -1,0 +1,14 @@
+# 実データは公開リポジトリに絶対に入れない
+data.json
+data-private/
+*.local.json
+
+# 同期メタデータ
+*.muse-github-snapshot-sync.json
+
+# ビルド・依存
+node_modules/
+tools/wasm-crypto/target/
+tools/wasm-crypto/pkg/
+tools/sync-go/lifelogsync
+__pycache__/

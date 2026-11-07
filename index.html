@@ -17,17 +17,23 @@
 <div class="layout">
   <!-- ============ 左ナビゲーション ============ -->
   <nav class="side-nav" id="side-nav" aria-label="セクションナビゲーション">
-    <ul class="side-nav__list">
-      <li class="side-nav__group-label" data-i18n="tab_record">記録</li>
-      <li><a href="#section-context" class="side-nav__link" data-i18n="nav_context">生活・環境</a></li>
-      <li><a href="#section-health" class="side-nav__link" data-i18n="nav_health">ヘルスケア</a></li>
-      <li><a href="#section-care" class="side-nav__link" data-i18n="nav_care">美容・セルフケア</a></li>
-      <li><a href="#section-activity" class="side-nav__link" data-i18n="nav_activity">運動・支出</a></li>
-      <li><a href="#section-diary" class="side-nav__link" data-i18n="nav_diary">ライフログ日記</a></li>
-      <li><a href="#section-list" class="side-nav__link" data-i18n="nav_list">記録一覧</a></li>
-      <li><a href="#section-data" class="side-nav__link" data-i18n="nav_data">データの入出力</a></li>
-      <li class="side-nav__divider"></li>
-      <li><a href="#panel-analysis" class="side-nav__link side-nav__link--tab" id="nav-analysis" data-i18n="tab_analysis">分析</a></li>
+    <ul class="tree">
+      <li class="tree__folder">
+        <button type="button" class="tree__folder-row" id="tree-record-toggle" aria-expanded="true" aria-controls="tree-record-children">
+          <span class="tree__chevron" aria-hidden="true"></span>
+          <span data-i18n="tab_record">記録</span>
+        </button>
+        <ul class="tree__children" id="tree-record-children">
+            <li><button type="button" class="tree__item is-active" data-slide-index="0" data-i18n="nav_context">生活・環境</button></li>
+            <li><button type="button" class="tree__item" data-slide-index="1" data-i18n="nav_health">ヘルスケア</button></li>
+            <li><button type="button" class="tree__item" data-slide-index="2" data-i18n="nav_care">美容・セルフケア</button></li>
+            <li><button type="button" class="tree__item" data-slide-index="3" data-i18n="nav_activity">運動・支出</button></li>
+            <li><button type="button" class="tree__item" data-slide-index="4" data-i18n="nav_diary">ライフログ日記</button></li>
+            <li><button type="button" class="tree__item" data-slide-index="5" data-i18n="nav_list">記録一覧</button></li>
+            <li><button type="button" class="tree__item" data-slide-index="6" data-i18n="nav_data">データの入出力</button></li>
+        </ul>
+      </li>
+      <li><button type="button" class="tree__item" data-slide-index="7" data-i18n="tab_analysis">分析</button></li>
     </ul>
   </nav>
 
@@ -51,328 +57,341 @@
     </header>
 
     <main class="main">
-      <!-- ============ 記録タブ ============ -->
-      <section id="panel-record">
-        <h2 class="panel__title" data-i18n="panel_record_title">1日の記録</h2>
-        <form id="record-form">
+      <h2 class="panel__title" data-i18n="panel_record_title">1日の記録</h2>
+      <form id="record-form">
+        <div class="date-bar">
           <fieldset id="section-date">
-            <legend data-i18n="fs_date">日付</legend>
-            <div class="form-grid">
-              <div>
-                <label for="f-date" data-i18n="label_date">日付（必須）</label>
-                <input type="date" id="f-date" name="date" required>
-              </div>
+                      <legend data-i18n="fs_date">日付</legend>
+                      <div class="form-grid">
+                        <div>
+                          <label for="f-date" data-i18n="label_date">日付（必須）</label>
+                          <input type="date" id="f-date" name="date" required>
+                        </div>
+                      </div>
+                    </fieldset>
+        </div>
+        <div class="stage">
+          <div class="stage__track" id="stage-track">
+            <div class="slide" data-slide-key="context">
+            <fieldset id="section-context">
+                        <legend data-i18n="fs_context">生活・環境</legend>
+                        <div class="form-grid">
+                          <div>
+                            <label for="f-day-type" data-i18n="label_day_type">スケジュール</label>
+                            <select id="f-day-type" name="day_type">
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="school" data-i18n="opt_school">学校（通学）</option>
+                              <option value="online" data-i18n="opt_online">オンライン授業</option>
+                              <option value="work" data-i18n="opt_work">バイト・仕事</option>
+                              <option value="off" data-i18n="opt_off">休日</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-start-time" data-i18n="label_start_time">開始時刻</label>
+                            <input type="time" id="f-start-time" name="start_time">
+                          </div>
+                          <div>
+                            <label for="f-end-time" data-i18n="label_end_time">終了時刻</label>
+                            <input type="time" id="f-end-time" name="end_time">
+                          </div>
+                          <div>
+                            <label for="f-hours" data-i18n="label_hours">時間 (h)</label>
+                            <input type="number" id="f-hours" name="hours" step="0.25" min="0" max="24" inputmode="decimal">
+                          </div>
+                          <div>
+                            <label for="f-location" data-i18n="label_location">行動範囲</label>
+                            <select id="f-location" name="location">
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="out" data-i18n="opt_out">外出</option>
+                              <option value="home" data-i18n="opt_home">在宅</option>
+                              <option value="mixed" data-i18n="opt_mixed">外出＋在宅</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-weather" data-i18n="label_weather">天気</label>
+                            <select id="f-weather" name="weather">
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="sunny" data-i18n="opt_sunny">晴れ</option>
+                              <option value="cloudy" data-i18n="opt_cloudy">くもり</option>
+                              <option value="rain" data-i18n="opt_rain">雨</option>
+                              <option value="snow" data-i18n="opt_snow">雪</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-context-note" data-i18n="label_context_note">環境メモ</label>
+                            <input type="text" id="f-context-note" name="context_note">
+                          </div>
+                        </div>
+                      </fieldset>
             </div>
-          </fieldset>
-
-          <fieldset id="section-context">
-            <legend data-i18n="fs_context">生活・環境</legend>
-            <div class="form-grid">
-              <div>
-                <label for="f-day-type" data-i18n="label_day_type">スケジュール</label>
-                <select id="f-day-type" name="day_type">
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="school" data-i18n="opt_school">学校（通学）</option>
-                  <option value="online" data-i18n="opt_online">オンライン授業</option>
-                  <option value="work" data-i18n="opt_work">バイト・仕事</option>
-                  <option value="off" data-i18n="opt_off">休日</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-start-time" data-i18n="label_start_time">開始時刻</label>
-                <input type="time" id="f-start-time" name="start_time">
-              </div>
-              <div>
-                <label for="f-end-time" data-i18n="label_end_time">終了時刻</label>
-                <input type="time" id="f-end-time" name="end_time">
-              </div>
-              <div>
-                <label for="f-hours" data-i18n="label_hours">時間 (h)</label>
-                <input type="number" id="f-hours" name="hours" step="0.25" min="0" max="24" inputmode="decimal">
-              </div>
-              <div>
-                <label for="f-location" data-i18n="label_location">行動範囲</label>
-                <select id="f-location" name="location">
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="out" data-i18n="opt_out">外出</option>
-                  <option value="home" data-i18n="opt_home">在宅</option>
-                  <option value="mixed" data-i18n="opt_mixed">外出＋在宅</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-weather" data-i18n="label_weather">天気</label>
-                <select id="f-weather" name="weather">
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="sunny" data-i18n="opt_sunny">晴れ</option>
-                  <option value="cloudy" data-i18n="opt_cloudy">くもり</option>
-                  <option value="rain" data-i18n="opt_rain">雨</option>
-                  <option value="snow" data-i18n="opt_snow">雪</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-context-note" data-i18n="label_context_note">環境メモ</label>
-                <input type="text" id="f-context-note" name="context_note">
-              </div>
+            <div class="slide" data-slide-key="health">
+            <fieldset id="section-health">
+                        <legend data-i18n="fs_health">ヘルスケア</legend>
+                        <div class="form-grid">
+                          <div>
+                            <label for="f-weight" data-i18n="label_weight">体重 (kg)</label>
+                            <input type="number" id="f-weight" name="weight_kg" step="0.05" min="20" max="300" inputmode="decimal">
+                          </div>
+                          <div>
+                            <label for="f-sleep" data-i18n="label_sleep">睡眠時間 (h)</label>
+                            <input type="number" id="f-sleep" name="sleep_hours" step="0.25" min="0" max="24" inputmode="decimal">
+                          </div>
+                          <div>
+                            <label for="f-bath" data-i18n="label_bath">入浴</label>
+                            <select id="f-bath" name="bath" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-meal-breakfast" data-i18n="label_breakfast">朝食</label>
+                            <select id="f-meal-breakfast" name="meal_breakfast" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-meal-lunch" data-i18n="label_lunch">昼食</label>
+                            <select id="f-meal-lunch" name="meal_lunch" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-meal-dinner" data-i18n="label_dinner">夕食</label>
+                            <select id="f-meal-dinner" name="meal_dinner" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-condition" data-i18n="label_condition">体調スコア (1–5)</label>
+                            <input type="number" id="f-condition" name="condition_score" min="1" max="5" step="1" inputmode="numeric">
+                          </div>
+                          <div>
+                            <label for="f-mental" data-i18n="label_mental">メンタルスコア (1–5)</label>
+                            <input type="number" id="f-mental" name="mental_score" min="1" max="5" step="1" inputmode="numeric">
+                          </div>
+                          <div>
+                            <label for="f-stress" data-i18n="label_stress">ストレス度 (1–5)</label>
+                            <input type="number" id="f-stress" name="stress_score" min="1" max="5" step="1" inputmode="numeric">
+                          </div>
+                        </div>
+                      </fieldset>
             </div>
-          </fieldset>
-
-          <fieldset id="section-health">
-            <legend data-i18n="fs_health">ヘルスケア</legend>
-            <div class="form-grid">
-              <div>
-                <label for="f-weight" data-i18n="label_weight">体重 (kg)</label>
-                <input type="number" id="f-weight" name="weight_kg" step="0.05" min="20" max="300" inputmode="decimal">
-              </div>
-              <div>
-                <label for="f-sleep" data-i18n="label_sleep">睡眠時間 (h)</label>
-                <input type="number" id="f-sleep" name="sleep_hours" step="0.25" min="0" max="24" inputmode="decimal">
-              </div>
-              <div>
-                <label for="f-bath" data-i18n="label_bath">入浴</label>
-                <select id="f-bath" name="bath" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-meal-breakfast" data-i18n="label_breakfast">朝食</label>
-                <select id="f-meal-breakfast" name="meal_breakfast" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-meal-lunch" data-i18n="label_lunch">昼食</label>
-                <select id="f-meal-lunch" name="meal_lunch" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-meal-dinner" data-i18n="label_dinner">夕食</label>
-                <select id="f-meal-dinner" name="meal_dinner" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-condition" data-i18n="label_condition">体調スコア (1–5)</label>
-                <input type="number" id="f-condition" name="condition_score" min="1" max="5" step="1" inputmode="numeric">
-              </div>
-              <div>
-                <label for="f-mental" data-i18n="label_mental">メンタルスコア (1–5)</label>
-                <input type="number" id="f-mental" name="mental_score" min="1" max="5" step="1" inputmode="numeric">
-              </div>
-              <div>
-                <label for="f-stress" data-i18n="label_stress">ストレス度 (1–5)</label>
-                <input type="number" id="f-stress" name="stress_score" min="1" max="5" step="1" inputmode="numeric">
-              </div>
+            <div class="slide" data-slide-key="care">
+            <fieldset id="section-care">
+                        <legend data-i18n="fs_care">美容・セルフケア</legend>
+                        <div class="form-grid">
+                          <div>
+                            <label for="f-face-wash" data-i18n="label_face_wash">洗顔</label>
+                            <select id="f-face-wash" name="face_wash" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-skincare" data-i18n="label_skincare">スキンケア</label>
+                            <select id="f-skincare" name="skincare" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-teeth-morning" data-i18n="label_teeth_morning">歯磨き（朝）</label>
+                            <select id="f-teeth-morning" name="teeth_morning" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-teeth-night" data-i18n="label_teeth_night">歯磨き（夜）</label>
+                            <select id="f-teeth-night" name="teeth_night" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-water" data-i18n="label_water">水分摂取量 (ml)</label>
+                            <input type="number" id="f-water" name="water_ml" min="0" max="10000" step="50" inputmode="numeric">
+                          </div>
+                          <div>
+                            <label for="f-caffeine" data-i18n="label_caffeine">カフェイン (杯)</label>
+                            <input type="number" id="f-caffeine" name="caffeine_cups" min="0" max="20" step="0.5" inputmode="decimal">
+                          </div>
+                          <div>
+                            <label for="f-snack" data-i18n="label_snack">間食</label>
+                            <select id="f-snack" name="snack" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_snack_yes">○ あり</option>
+                              <option value="false" data-i18n="opt_snack_no">× なし</option>
+                            </select>
+                          </div>
+                        </div>
+                      </fieldset>
             </div>
-          </fieldset>
-
-          <fieldset id="section-care">
-            <legend data-i18n="fs_care">美容・セルフケア</legend>
-            <div class="form-grid">
-              <div>
-                <label for="f-face-wash" data-i18n="label_face_wash">洗顔</label>
-                <select id="f-face-wash" name="face_wash" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-skincare" data-i18n="label_skincare">スキンケア</label>
-                <select id="f-skincare" name="skincare" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-teeth-morning" data-i18n="label_teeth_morning">歯磨き（朝）</label>
-                <select id="f-teeth-morning" name="teeth_morning" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-teeth-night" data-i18n="label_teeth_night">歯磨き（夜）</label>
-                <select id="f-teeth-night" name="teeth_night" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-water" data-i18n="label_water">水分摂取量 (ml)</label>
-                <input type="number" id="f-water" name="water_ml" min="0" max="10000" step="50" inputmode="numeric">
-              </div>
-              <div>
-                <label for="f-caffeine" data-i18n="label_caffeine">カフェイン (杯)</label>
-                <input type="number" id="f-caffeine" name="caffeine_cups" min="0" max="20" step="0.5" inputmode="decimal">
-              </div>
-              <div>
-                <label for="f-snack" data-i18n="label_snack">間食</label>
-                <select id="f-snack" name="snack" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_snack_yes">○ あり</option>
-                  <option value="false" data-i18n="opt_snack_no">× なし</option>
-                </select>
-              </div>
+            <div class="slide" data-slide-key="activity">
+            <fieldset id="section-activity">
+                        <legend data-i18n="fs_activity">運動・支出</legend>
+                        <div class="form-grid">
+                          <div>
+                            <label for="f-exercise" data-i18n="label_exercise">運動</label>
+                            <select id="f-exercise" name="exercise" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_exercise_yes">○ した</option>
+                              <option value="false" data-i18n="opt_exercise_no">× しなかった</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-abs-video" data-i18n="label_abs_video">腹筋動画 (A–G)</label>
+                            <select id="f-abs-video" name="abs_video">
+                              <option value="" data-i18n="opt_none">なし</option>
+                              <option value="A">A</option>
+                              <option value="B">B</option>
+                              <option value="C">C</option>
+                              <option value="D">D</option>
+                              <option value="E">E</option>
+                              <option value="F">F</option>
+                              <option value="G">G</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-long-walk" data-i18n="label_long_walk">長距離歩行</label>
+                            <select id="f-long-walk" name="long_walk" data-tristate>
+                              <option value="" data-i18n="opt_empty">未入力</option>
+                              <option value="true" data-i18n="opt_yes">○</option>
+                              <option value="false" data-i18n="opt_no">×</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="f-spending-total" data-i18n="label_spending">ざっくり支出 (円)</label>
+                            <input type="number" id="f-spending-total" name="rough_total_yen" min="0" step="100" inputmode="numeric">
+                          </div>
+                          <div class="form-grid__full">
+                            <label for="f-exercise-detail" data-i18n="label_exercise_detail">運動の詳細（自由入力）</label>
+                            <input type="text" id="f-exercise-detail" name="exercise_detail">
+                          </div>
+                          <div class="form-grid__full">
+                            <label for="f-spending-tags" data-i18n="label_spending_tags">支出タグ（カンマ区切り。例: 食費, 交通, 日用品）</label>
+                            <input type="text" id="f-spending-tags" name="spending_tags">
+                          </div>
+                        </div>
+                      </fieldset>
             </div>
-          </fieldset>
-
-          <fieldset id="section-activity">
-            <legend data-i18n="fs_activity">運動・支出</legend>
-            <div class="form-grid">
-              <div>
-                <label for="f-exercise" data-i18n="label_exercise">運動</label>
-                <select id="f-exercise" name="exercise" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_exercise_yes">○ した</option>
-                  <option value="false" data-i18n="opt_exercise_no">× しなかった</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-abs-video" data-i18n="label_abs_video">腹筋動画 (A–G)</label>
-                <select id="f-abs-video" name="abs_video">
-                  <option value="" data-i18n="opt_none">なし</option>
-                  <option value="A">A</option>
-                  <option value="B">B</option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
-                  <option value="E">E</option>
-                  <option value="F">F</option>
-                  <option value="G">G</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-long-walk" data-i18n="label_long_walk">長距離歩行</label>
-                <select id="f-long-walk" name="long_walk" data-tristate>
-                  <option value="" data-i18n="opt_empty">未入力</option>
-                  <option value="true" data-i18n="opt_yes">○</option>
-                  <option value="false" data-i18n="opt_no">×</option>
-                </select>
-              </div>
-              <div>
-                <label for="f-spending-total" data-i18n="label_spending">ざっくり支出 (円)</label>
-                <input type="number" id="f-spending-total" name="rough_total_yen" min="0" step="100" inputmode="numeric">
-              </div>
-              <div class="form-grid__full">
-                <label for="f-exercise-detail" data-i18n="label_exercise_detail">運動の詳細（自由入力）</label>
-                <input type="text" id="f-exercise-detail" name="exercise_detail">
-              </div>
-              <div class="form-grid__full">
-                <label for="f-spending-tags" data-i18n="label_spending_tags">支出タグ（カンマ区切り。例: 食費, 交通, 日用品）</label>
-                <input type="text" id="f-spending-tags" name="spending_tags">
-              </div>
+            <div class="slide" data-slide-key="diary">
+            <fieldset id="section-diary">
+                        <legend data-i18n="fs_diary">ライフログ日記</legend>
+                        <div class="form-grid">
+                          <div class="form-grid__full">
+                            <label for="f-reflection" data-i18n="label_reflection">1日の振り返り</label>
+                            <textarea id="f-reflection" name="reflection"></textarea>
+                          </div>
+                          <div class="form-grid__full">
+                            <label for="f-mood" data-i18n="label_mood">感情メモ</label>
+                            <textarea id="f-mood" name="mood_memo"></textarea>
+                          </div>
+                        </div>
+                      </fieldset>
             </div>
-          </fieldset>
-
-          <fieldset id="section-diary">
-            <legend data-i18n="fs_diary">ライフログ日記</legend>
-            <div class="form-grid">
-              <div class="form-grid__full">
-                <label for="f-reflection" data-i18n="label_reflection">1日の振り返り</label>
-                <textarea id="f-reflection" name="reflection"></textarea>
-              </div>
-              <div class="form-grid__full">
-                <label for="f-mood" data-i18n="label_mood">感情メモ</label>
-                <textarea id="f-mood" name="mood_memo"></textarea>
-              </div>
+            <div class="slide" data-slide-key="list">
+            <h2 class="panel__title" id="section-list" data-i18n="panel_list_title">記録一覧</h2>
+                    <div class="record-list">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col" data-i18n="th_date">日付</th>
+                            <th scope="col" data-i18n="th_day_type">日種別</th>
+                            <th scope="col" data-i18n="th_hours">時間</th>
+                            <th scope="col" data-i18n="th_weight">体重</th>
+                            <th scope="col" data-i18n="th_sleep">睡眠</th>
+                            <th scope="col" data-i18n="th_condition">体調</th>
+                            <th scope="col" data-i18n="th_mental">メンタル</th>
+                            <th scope="col" data-i18n="th_actions">操作</th>
+                          </tr>
+                        </thead>
+                        <tbody id="record-tbody"></tbody>
+                      </table>
+                      <p id="record-empty" data-i18n="record_empty">まだ記録がありません。</p>
+                    </div>
             </div>
-          </fieldset>
-
-          <div class="form-actions">
-            <button type="submit" class="button button--primary" data-i18n="btn_save">保存する</button>
-            <button type="button" class="button" id="btn-new" data-i18n="btn_new">新規入力に戻す</button>
-          </div>
-          <p class="status-message" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-
-        <h2 class="panel__title" id="section-list" data-i18n="panel_list_title">記録一覧</h2>
-        <div class="record-list">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col" data-i18n="th_date">日付</th>
-                <th scope="col" data-i18n="th_day_type">日種別</th>
-                <th scope="col" data-i18n="th_hours">時間</th>
-                <th scope="col" data-i18n="th_weight">体重</th>
-                <th scope="col" data-i18n="th_sleep">睡眠</th>
-                <th scope="col" data-i18n="th_condition">体調</th>
-                <th scope="col" data-i18n="th_mental">メンタル</th>
-                <th scope="col" data-i18n="th_actions">操作</th>
-              </tr>
-            </thead>
-            <tbody id="record-tbody"></tbody>
-          </table>
-          <p id="record-empty" data-i18n="record_empty">まだ記録がありません。</p>
-        </div>
-
-        <h2 class="panel__title" id="section-data" data-i18n="panel_data_title">データの入出力</h2>
-        <div class="data-actions">
-          <p data-i18n="data_desc">データは data.json スキーマ v1 形式で書き出し／読み込みできます。実データのファイルは公開リポジトリに置かず、プライベートな場所で管理してください。</p>
-          <div class="data-actions__buttons">
-            <button type="button" class="button" id="btn-export" data-i18n="btn_export">JSONを書き出す</button>
-            <label for="file-import" class="button" data-i18n="btn_import">JSONを読み込む</label>
-            <input type="file" id="file-import" accept="application/json,.json">
-            <button type="button" class="button" id="btn-sample" data-i18n="btn_sample">ダミーサンプルを読み込む</button>
-          </div>
-          <p class="status-message" id="data-status" role="status" aria-live="polite"></p>
-        </div>
-      </section>
-
-      <!-- ============ 分析タブ ============ -->
-      <section id="panel-analysis" hidden>
-        <h2 class="panel__title" data-i18n="panel_analysis_title">分析</h2>
-        <div class="stat-grid" id="stat-grid">
-          <div class="stat-card">
-            <p class="stat-card__label" data-i18n="stat_count_label">記録日数</p>
-            <p class="stat-card__value" id="stat-count">–</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-card__label" data-i18n="stat_coverage_label">記録率（期間内）</p>
-            <p class="stat-card__value" id="stat-coverage">–</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-card__label" data-i18n="stat_sleep_label">平均睡眠時間</p>
-            <p class="stat-card__value" id="stat-sleep">–</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-card__label" data-i18n="stat_weight_label">体重の変化（最初→最後）</p>
-            <p class="stat-card__value" id="stat-weight">–</p>
+            <div class="slide" data-slide-key="data">
+            <h2 class="panel__title" id="section-data" data-i18n="panel_data_title">データの入出力</h2>
+                    <div class="data-actions">
+                      <p data-i18n="data_desc">データは data.json スキーマ v1 形式で書き出し／読み込みできます。実データのファイルは公開リポジトリに置かず、プライベートな場所で管理してください。</p>
+                      <div class="data-actions__buttons">
+                        <button type="button" class="button" id="btn-export" data-i18n="btn_export">JSONを書き出す</button>
+                        <label for="file-import" class="button" data-i18n="btn_import">JSONを読み込む</label>
+                        <input type="file" id="file-import" accept="application/json,.json">
+                        <button type="button" class="button" id="btn-sample" data-i18n="btn_sample">ダミーサンプルを読み込む</button>
+                      </div>
+                      <p class="status-message" id="data-status" role="status" aria-live="polite"></p>
+                    </div>
+            </div>
+            <div class="slide" data-slide-key="analysis">
+            <h2 class="panel__title" data-i18n="panel_analysis_title">分析</h2>
+                    <div class="stat-grid" id="stat-grid">
+                      <div class="stat-card">
+                        <p class="stat-card__label" data-i18n="stat_count_label">記録日数</p>
+                        <p class="stat-card__value" id="stat-count">–</p>
+                      </div>
+                      <div class="stat-card">
+                        <p class="stat-card__label" data-i18n="stat_coverage_label">記録率（期間内）</p>
+                        <p class="stat-card__value" id="stat-coverage">–</p>
+                      </div>
+                      <div class="stat-card">
+                        <p class="stat-card__label" data-i18n="stat_sleep_label">平均睡眠時間</p>
+                        <p class="stat-card__value" id="stat-sleep">–</p>
+                      </div>
+                      <div class="stat-card">
+                        <p class="stat-card__label" data-i18n="stat_weight_label">体重の変化（最初→最後）</p>
+                        <p class="stat-card__value" id="stat-weight">–</p>
+                      </div>
+                    </div>
+            
+                    <div class="chart-block">
+                      <h3 class="chart-block__title" data-i18n="chart_weight_title">体重の推移</h3>
+                      <canvas id="chart-weight" aria-label="体重の推移グラフ"></canvas>
+                    </div>
+                    <div class="chart-block">
+                      <h3 class="chart-block__title" data-i18n="chart_sleep_title">睡眠時間の推移</h3>
+                      <canvas id="chart-sleep" aria-label="睡眠時間の推移グラフ"></canvas>
+                    </div>
+                    <div class="chart-block">
+                      <h3 class="chart-block__title" data-i18n="chart_scores_title">体調・メンタルスコアの推移</h3>
+                      <canvas id="chart-scores" aria-label="体調とメンタルスコアの推移グラフ"></canvas>
+                    </div>
+                    <div class="chart-block">
+                      <h3 class="chart-block__title" data-i18n="chart_scatter_title">睡眠時間 × 翌日の体調スコア</h3>
+                      <canvas id="chart-scatter" aria-label="睡眠時間と翌日の体調スコアの散布図"></canvas>
+                      <p class="chart-block__note" id="correlation-note"></p>
+                    </div>
+                    <div class="chart-block">
+                      <h3 class="chart-block__title" data-i18n="chart_daytype_title">日種別サマリー</h3>
+                      <div id="daytype-summary"></div>
+                    </div>
+            </div>
           </div>
         </div>
-
-        <div class="chart-block">
-          <h3 class="chart-block__title" data-i18n="chart_weight_title">体重の推移</h3>
-          <canvas id="chart-weight" aria-label="体重の推移グラフ"></canvas>
-        </div>
-        <div class="chart-block">
-          <h3 class="chart-block__title" data-i18n="chart_sleep_title">睡眠時間の推移</h3>
-          <canvas id="chart-sleep" aria-label="睡眠時間の推移グラフ"></canvas>
-        </div>
-        <div class="chart-block">
-          <h3 class="chart-block__title" data-i18n="chart_scores_title">体調・メンタルスコアの推移</h3>
-          <canvas id="chart-scores" aria-label="体調とメンタルスコアの推移グラフ"></canvas>
-        </div>
-        <div class="chart-block">
-          <h3 class="chart-block__title" data-i18n="chart_scatter_title">睡眠時間 × 翌日の体調スコア</h3>
-          <canvas id="chart-scatter" aria-label="睡眠時間と翌日の体調スコアの散布図"></canvas>
-          <p class="chart-block__note" id="correlation-note"></p>
-        </div>
-        <div class="chart-block">
-          <h3 class="chart-block__title" data-i18n="chart_daytype_title">日種別サマリー</h3>
-          <div id="daytype-summary"></div>
-        </div>
-      </section>
+        <p class="status-message" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="action-bar">
+        <button type="button" class="button action-bar__nav" id="slide-prev" aria-label="前のセクションへ">&#8249;</button>
+        <span class="action-bar__name" id="slide-name">生活・環境</span>
+        <button type="button" class="button action-bar__nav" id="slide-next" aria-label="次のセクションへ">&#8250;</button>
+        <span class="action-bar__spacer"></span>
+        <span class="action-bar__form" id="action-form">
+          <button type="submit" form="record-form" class="button button--primary" data-i18n="btn_save">保存する</button>
+          <button type="button" class="button" id="btn-new" data-i18n="btn_new">新規入力に戻す</button>
+        </span>
+      </div>
     </main>
     <footer class="site-footer">
       <div class="site-footer__inner">

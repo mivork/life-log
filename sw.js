@@ -1,6 +1,6 @@
 // Service Worker: ページはネットワーク優先＋キャッシュフォールバック、
 // 静的アセットはキャッシュ優先でオフラインでも記録画面を開けるようにする。
-const CACHE_NAME = "lifelog-v4";
+const CACHE_NAME = "lifelog-v5";
 const CORE_ASSETS = [
   "./",
   "./index.html",

@@ -1,1 +1,108 @@
-IyBMaWZlTG9nIOKAlCBQZXJzb25hbCBMaWZlIFN1cHBvcnQgJiBMaWZlIExvZ2dpbmcKCltFbmdsaXNoXShSRUFETUUubWQpIHwgW+aXpeacrOiqnl0oamEvUkVBRE1FLm1kKSB8IFvtlZzqta3slrRdKGtvL1JFQURNRS5tZCkKClshW0xpY2Vuc2U6IE1JVF0oaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9MaWNlbnNlLU1JVC1ibHVlLnN2ZyldKExJQ0VOU0UpClshW0xpdmUgRGVtb10oaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9EZW1vLUxpdmUtYnJpZ2h0Z3JlZW4pXShodHRwczovL21pdm9yay5naXRodWIuaW8vbGlmZS1sb2cvKQohW1R5cGVTY3JpcHRdKGh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvVHlwZVNjcmlwdC0zMTc4QzY/bG9nbz10eXBlc2NyaXB0JmxvZ29Db2xvcj13aGl0ZSkKIVtObyBCYWNrZW5kXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0JhY2tlbmQtTm9uZSUyMChsb2NhbCUyMG9ubHkpLXN1Y2Nlc3MpCgpBIHByaXZhY3ktZmlyc3QgbGlmZSBsb2dnaW5nIHdlYiBhcHAgdGhhdCB0cmFja3MgeW91ciBkYWlseSBoYWJpdHMsIGhlYWx0aCwgYW5kIHNwZW5kaW5nIOKAlCBhbGwgc3RvcmVkIGxvY2FsbHkgaW4geW91ciBicm93c2VyLiBObyBzZXJ2ZXIsIG5vIGFjY291bnQsIG5vIGRhdGEgY29sbGVjdGlvbi4KCioqTGl2ZSBEZW1vOioqIGh0dHBzOi8vbWl2b3JrLmdpdGh1Yi5pby9saWZlLWxvZy8KCiMjIFNjcmVlbnNob3RzCgohW1JlY29yZCB0YWJdKGRvY3MvaW1hZ2VzL3JlY29yZC5wbmcpCgohW0FuYWx5c2lzIHRhYiAoZHVtbXkgc2FtcGxlIGRhdGEpXShkb2NzL2ltYWdlcy9hbmFseXNpcy5wbmcpCgojIyBGZWF0dXJlcwoKLSAqKkNvbXBsZXRlIGRhaWx5IHRyYWNraW5nKiog4oCUIFNsZWVwLCB3ZWlnaHQsIG1lYWxzLCBleGVyY2lzZSwgc2tpbmNhcmUgcm91dGluZSwgbWVudGFsIGhlYWx0aCBzY29yZXMsIHNwZW5kaW5nLCBhbmQgZnJlZS1mb3JtIGpvdXJuYWxpbmcKLSAqKlZpc3VhbCBhbmFseXRpY3MqKiDigJQgV2VpZ2h0IHRyZW5kcywgc2xlZXAgcGF0dGVybnMsIGNvbmRpdGlvbi9tZW50YWwgc2NvcmUgY2hhcnRzLCBhbmQgc2xlZXAtdnMtbmV4dC1kYXktY29uZGl0aW9uIHNjYXR0ZXIgcGxvdHMgd2l0aCBjb3JyZWxhdGlvbiBhbmFseXNpcyAocHJlc2VudGVkIGFzIGh5cG90aGVzZXMsIG5vdCBjb25jbHVzaW9ucykKLSAqKkRheS10eXBlIGJyZWFrZG93bioqIOKAlCBDb21wYXJlIGF2ZXJhZ2VzIGFjcm9zcyBzY2hvb2wgZGF5cywgcmVtb3RlIGRheXMsIHdvcmsgZGF5cywgYW5kIGRheXMgb2ZmCi0gKipUb2RheSB2aWV3ICh2NCkqKiDigJQgQSBkYWlseSBob21lIHNjcmVlbjogdG9kYXkncyB0cmFpbmluZyAoYSBmaXhlZCA2LW1vdmUgYm9keXdlaWdodC9zaGFkb3cgY2lyY3VpdCwgMjAgcmVwcyBlYWNoOyByZXN0IGRheXMgb24gc2Nob29sIGRheXMpLCB0aGUgbGF0ZXN0IGFkdmljZSBlbnRyeSwgdGhpcyB3ZWVrJ3Mgc2Vzc2lvbiBjb3VudCB2cyB0aGUgNC1wZXItd2VlayBnb2FsLCBsb2dnaW5nIHN0cmVhaywgYW5kIGxhdGVzdCB3ZWlnaHQgY2hhbmdlCi0gKipPcHRpb25hbCBwcml2YXRlIHN5bmMgKHY0KSoqIOKAlCBSZWNvcmRzIHN0YXkgaW4gbG9jYWxTdG9yYWdlIGJ5IGRlZmF1bHQuIElmIHlvdSBhZGQgeW91ciBvd24gR2l0SHViIHRva2VuIGZvciBhIHByaXZhdGUgcmVwb3NpdG9yeSwgcmVjb3JkcyBhdXRvLXN5bmMgYXMgYGxpZmUtZGF0YS5qc29uYCwgYW5kIHRyYWluaW5nIGhpc3RvcnkgKGBkYXRhLmpzb25gKSBwbHVzIGFkdmljZSAoYGFkdmljZS5qc29uYCkgYXJlIHJlYWQgZnJvbSB0aGUgc2FtZSBwcml2YXRlIHJlcG9zaXRvcnkuIFRoZSB0b2tlbiBuZXZlciBsZWF2ZXMgeW91ciBicm93c2VyIGV4Y2VwdCB0byBjYWxsIHRoZSBHaXRIdWIgQVBJCi0gKipKU09OIGltcG9ydC9leHBvcnQqKiDigJQgQmFjayB1cCBhbmQgcmVzdG9yZSB5b3VyIGRhdGEgaW4gYSBwb3J0YWJsZSBgZGF0YS5qc29uYCAoc2NoZW1hIHYxKSBmb3JtYXQKLSAqKlBXQSByZWFkeSoqIOKAlCBBZGQgdG8geW91ciBob21lIHNjcmVlbiBmb3IgYW4gYXBwLWxpa2UgZXhwZXJpZW5jZQotICoqTXVsdGktbGFuZ3VhZ2UgVUkqKiDigJQgRW5nbGlzaCwgSmFwYW5lc2UsIGFuZCBLb3JlYW4KCiMjIEFyY2hpdGVjdHVyZQoKfCBMYXllciB8IFRlY2ggfCBMb2NhdGlvbiB8IFJvbGUgfAp8LS0tfC0tLXwtLS18LS0tfAp8IEZyb250ZW5kIHwgVHlwZVNjcmlwdCAvIEhUTUwgLyBDU1MgLyBDaGFydC5qcyB8IGBpbmRleC5odG1sYCwgYHNyYy9gLCBgY3NzL2AsIGBqcy9gIHwgVHdvLXRhYiBVSSAoUmVjb3JkIC8gQW5hbHlzaXMpLiBIb3N0ZWQgb24gR2l0SHViIFBhZ2VzLCBubyBhdXRoIHJlcXVpcmVkIHwKfCBBbmFseXNpcyBFbmdpbmUgfCBQeXRob24gKHBhbmRhcykgfCBgdG9vbHMvYW5hbHlzaXMvYCB8IEdlbmVyYXRlcyB3ZWVrbHkgc3VtbWFyaWVzIGZyb20gZGF0YS5qc29uIChjb3JyZWxhdGlvbiBhcyBoeXBvdGhlc2lzLCB3aXRoIG4tY291bnQgYW5kIGNhdmVhdHMpIHwKfCBTeW5jIFRvb2wgfCBHbyB8IGB0b29scy9zeW5jLWdvL2AgfCBTY2hlbWEgdmFsaWRhdGlvbiBhbmQgc3luYyB0byBhIHByaXZhdGUgcmVwbyAoZHJ5LXJ1biBieSBkZWZhdWx0KSB8CnwgVmFsaWRhdGlvbiAmIEVuY3J5cHRpb24gfCBSdXN0IC8gV0FTTSB8IGB0b29scy93YXNtLWNyeXB0by9gIHwgUmVjb3JkIHZhbGlkYXRpb24gYW5kIGxvY2FsIGVuY3J5cHRpb24gd2l0aCBBcmdvbjJpZCArIEFFUy0yNTYtR0NNIChQaGFzZSA0KSB8CnwgQXV0b21hdGlvbiB8IFNoZWxsIC8gTHVhIHwgYHNjcmlwdHMvYCwgYHJ1bGVzL2AgfCBCYXRjaCBleGVjdXRpb246IHZhbGlkYXRlLCBhbmFseXplLCBjb21taXQuIENvbmRpdGlvbmFsIGJyYW5jaGluZyB2aWEgZXh0ZXJuYWwgcnVsZSBmaWxlcyB8CnwgTmF0aXZlIEV4dGVuc2lvbiB8IEtvdGxpbiAoZnV0dXJlKSB8IGBkb2NzL2Z1dHVyZS1rb3RsaW4ubWRgIHwgTW9iaWxlIGV4cGFuc2lvbiBub3RlcyBvbmx5IHwKCiMjIFVzYWdlCgojIyMgUmVjb3JkIFRhYgoKU2VsZWN0IGEgZGF0ZSBhbmQgZW50ZXIgeW91ciBkYWlseSBsb2cuIFRoZSBmb3JtIGNvdmVyczoKCi0gKipMaWZlICYgRW52aXJvbm1lbnQqKiDigJQgU2NoZWR1bGUgdHlwZSwgbG9jYXRpb24gKG91dC9ob21lL21peGVkKSwgd2VhdGhlciwgbm90ZXMKLSAqKkhlYWx0aGNhcmUqKiDigJQgV2VpZ2h0LCBzbGVlcCBob3VycywgYmF0aGluZywgbWVhbHMgKGJyZWFrZmFzdC9sdW5jaC9kaW5uZXIpLCBjb25kaXRpb24gc2NvcmUgKDHigJM1KSwgbWVudGFsIHNjb3JlICgx4oCTNSksIHN0cmVzcyBsZXZlbCAoMeKAkzUpCi0gKipCZWF1dHkgJiBTZWxmLWNhcmUqKiDigJQgRmFjZSB3YXNoLCBza2luY2FyZSwgdGVldGggYnJ1c2hpbmcgKG1vcm5pbmcvbmlnaHQpLCB3YXRlciBpbnRha2UsIGNhZmZlaW5lLCBzbmFja3MKLSAqKkV4ZXJjaXNlICYgU3BlbmRpbmcqKiDigJQgRXhlcmNpc2UgZGV0YWlscywgYWIgd29ya291dCB2aWRlbyBzZWxlY3Rpb24gKEHigJNHKSwgbG9uZyB3YWxrcywgcm91Z2ggc3BlbmRpbmcgd2l0aCB0YWdzCgpTYW1lLWRhdGUgZW50cmllcyBhcmUgb3ZlcndyaXR0ZW4uIFlvdSBjYW4gZWRpdCBvciBkZWxldGUgYW55IHJlY29yZCBmcm9tIHRoZSBsaXN0IGJlbG93IHRoZSBmb3JtLgoKIyMjIEFuYWx5c2lzIFRhYgoKLSAqKlN1bW1hcnkgY2FyZHMqKiDigJQgVG90YWwgZGF5cyByZWNvcmRlZCwgcmVjb3JkaW5nIHJhdGUsIGF2ZXJhZ2Ugc2xlZXAsIHdlaWdodCBjaGFuZ2UgKGZpcnN0IHRvIGxhc3QpCi0gKipDaGFydHMqKiDigJQgV2VpZ2h0IHRyZW5kIChsaW5lKSwgc2xlZXAgZHVyYXRpb24gKGJhciksIGNvbmRpdGlvbiAmIG1lbnRhbCBzY29yZXMgKGxpbmUpLCBzbGVlcCB2cy4gbmV4dC1kYXkgY29uZGl0aW9uIChzY2F0dGVyIHdpdGggUGVhcnNvbiByKQotICoqRGF5LXR5cGUgc3VtbWFyeSB0YWJsZSoqIOKAlCBBdmVyYWdlIHNsZWVwLCBjb25kaXRpb24sIGFuZCBtZW50YWwgc2NvcmVzIGdyb3VwZWQgYnkgc2NoZWR1bGUgdHlwZQoKIyMjIERhdGEgSW1wb3J0L0V4cG9ydAoKRXhwb3J0IG9yIGltcG9ydCBpbiBgZGF0YS5qc29uYCBzY2hlbWEgdjEgZm9ybWF0LiBTYW1lLWRhdGUgcmVjb3JkcyBhcmUgb3ZlcndyaXR0ZW4gb24gaW1wb3J0LgoKIyMgRGF0YSBTYWZldHkgUnVsZXMgKENyaXRpY2FsKQoKMS4gKipOZXZlciBwdXQgcmVhbCBkYXRhIGluIHRoaXMgcHVibGljIHJlcG9zaXRvcnkuKiogT25seSBjb2RlIGFuZCBkdW1teSBzYW1wbGVzIGJlbG9uZyBoZXJlLgoyLiBSZWFsIGBkYXRhLmpzb25gIGZpbGVzIGdvIGluIGEgcHJpdmF0ZSByZXBvc2l0b3J5IG9yIGEgbm9uLXB1YmxpYyBsb2NhbCBmb2xkZXIgKGFsc28gZXhjbHVkZWQgdmlhIGAuZ2l0aWdub3JlYCkuCjMuIE5vIHRva2VucyBvciBjcmVkZW50aWFscyBhcmUgZW1iZWRkZWQgaW4gdGhlIGNvZGUuIFRoZSBzeW5jIHRvb2wncyBwdXNoIGF1dGhlbnRpY2F0aW9uIHJlbGllcyBvbiB0aGUgdXNlcidzIG93biBnaXQgY29uZmlndXJhdGlvbi4KNC4gQWxsIHNhbXBsZSBkYXRhICh0aGUgIkxvYWQgZHVtbXkgc2FtcGxlIiBidXR0b24gb24gdGhlIGZyb250ZW5kLCBgdG9vbHMvYW5hbHlzaXMvc2FtcGxlLWRhdGEuanNvbmApIGNvbnRhaW5zIGNsZWFybHkgZHVtbXkgdmFsdWVzIGFuZCBpcyBub3QgcmVhbCBkYXRhLgoKIyMgRGV2ZWxvcG1lbnQKCmBgYGJhc2gKIyBGcm9udGVuZCAoY29tcGlsZSBUeXBlU2NyaXB0KQpucHggLXAgdHlwZXNjcmlwdCB0c2MgLXAgdHNjb25maWcuanNvbiAgICMgc3JjL21haW4udHMgLT4ganMvbWFpbi5qcwoKIyBMb2NhbCBwcmV2aWV3CnB5dGhvbjMgLW0gaHR0cC5zZXJ2ZXIgODAwMCAgICAgICAgICAgICAgIyBodHRwOi8vbG9jYWxob3N0OjgwMDAvCgojIFB5dGhvbiBhbmFseXNpcyAodmVyaWZ5IHdpdGggc2FtcGxlIGRhdGEpCnB5dGhvbjMgdG9vbHMvYW5hbHlzaXMvYW5hbHl6ZS5weSB0b29scy9hbmFseXNpcy9zYW1wbGUtZGF0YS5qc29uIC0tb3V0IC90bXAvbGlmZWxvZy1zdW1tYXJ5CgojIEdvIHN5bmMgKHZhbGlkYXRpb24gKyBkcnktcnVuIGJ5IGRlZmF1bHQpCmNkIHRvb2xzL3N5bmMtZ28gJiYgZ28gcnVuIC4gLS1kYXRhIC9wYXRoL3RvL2RhdGEuanNvbiAtLXJlcG8gL3BhdGgvdG8vcHJpdmF0ZS1yZXBvCgojIEF1dG9tYXRpb24gKGJhdGNoOiB2YWxpZGF0ZSAtPiBhbmFseXplIC0+IGNvbW1pdDsgZHJ5LXJ1biBieSBkZWZhdWx0KQpMSUZFTE9HX0RBVEE9L3BhdGgvdG8vZGF0YS5qc29uIExJRkVMT0dfUkVQTz0vcGF0aC90by9wcml2YXRlLXJlcG8gc2NyaXB0cy9hdXRvLWNvbW1pdC5zaApgYGAKCiMjIENvZGluZyBDb252ZW50aW9ucwoKLSBObyBpbmxpbmUgQ1NTIG9yIGlubGluZSBKUyDigJQgZXh0ZXJuYWwgZmlsZXMgb25seQotIENTUyB1c2VzIGBjc3MvdG9rZW5zLmNzc2AgKyBgY3NzL2Jhc2UuY3NzYCwgdW5pZmllZCB2aWEgYEBpbXBvcnRgIGluIGBjc3Mvc3R5bGUuY3NzYAotIEJFTSBuYW1pbmcsIHNlbWFudGljIEhUTUwsIFdDQUcgMi4yIEFBIGNvbnNpZGVyYXRpb25zICh2aXNpYmxlIGZvY3VzLCBjb250cmFzdCwgbGFiZWwgYXNzb2NpYXRpb24pCgojIyBQaGFzZSBTdGF0dXMKCi0gUGhhc2UgMDogU2NoZW1hIHYxIGZpbmFsaXplZCwgc2FmZXR5IGRlc2lnbiAoZGF0YSBwYXRoID0gSlNPTiBJL08gKyBicm93c2VyLW9ubHkgc3RvcmFnZSkKLSBQaGFzZSAxOiBGcm9udGVuZCBNVlAgY29tcGxldGUgKHRoaXMgcmVwb3NpdG9yeSkKLSBQaGFzZSAyOiBQeXRob24gYW5hbHlzaXMgZW5naW5lIGNvbXBsZXRlICh2ZXJpZmllZCB3aXRoIHNhbXBsZSBkYXRhKQotIFBoYXNlIDM6IEdvIHN5bmMgdG9vbCBpbmNsdWRlZCAoZHJ5LXJ1biBieSBkZWZhdWx0LCB0YXJnZXQgY29uZmlndXJhYmxlKQotIFBoYXNlIDQ6IFJ1c3QvV0FTTSBjb3JlIHByZXBhcmVkLiBGcm9udGVuZCBpbnRlZ3JhdGlvbiBkZXNpZ24gaW4gYGRvY3MvcGhhc2U0LXdhc20ubWRgCi0gUGhhc2UgNTogU2hlbGwvTHVhIGF1dG9tYXRpb24gaW5jbHVkZWQuIEtvdGxpbiBpcyBmdXR1cmUtb3V0bG9vayBub3RlcyBvbmx5CgojIyBMaWNlbnNlCgpNSVQK
+# LifeLog — Personal Life Support & Life Logging
+
+[English](README.md) | [日本語](ja/README.md) | [한국어](ko/README.md)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://mivork.github.io/life-log/)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![No Backend](https://img.shields.io/badge/Backend-None%20(local%20only)-success)
+
+A privacy-first life logging web app that tracks your daily habits, health, and spending — all stored locally in your browser. No server, no account, no data collection.
+
+**Live Demo:** https://mivork.github.io/life-log/
+
+## Screenshots
+
+![Record tab](docs/images/record.png)
+
+![Analysis tab (dummy sample data)](docs/images/analysis.png)
+
+## Features
+
+- **Complete daily tracking** — Sleep, weight, meals, exercise, skincare routine, mental health scores, spending, and free-form journaling
+- **Visual analytics** — Weight trends, sleep patterns, condition/mental score charts, and sleep-vs-next-day-condition scatter plots with correlation analysis (presented as hypotheses, not conclusions)
+- **Day-type breakdown** — Compare averages across school days, remote days, work days, and days off
+- **Today view (v4)** — A daily home screen: today's training (a fixed 6-move bodyweight/shadow circuit, 20 reps each; rest days on school days), the latest advice entry, this week's session count vs the 4-per-week goal, logging streak, and latest weight change
+- **Optional private sync (v4)** — Records stay in localStorage by default. If you add your own GitHub token for a private repository, records auto-sync as `life-data.json`, and training history (`data.json`) plus advice (`advice.json`) are read from the same private repository. The token never leaves your browser except to call the GitHub API
+- **JSON import/export** — Back up and restore your data in a portable `data.json` (schema v1) format
+- **PWA ready** — Add to your home screen for an app-like experience
+- **Multi-language UI** — English, Japanese, and Korean
+
+## Architecture
+
+| Layer | Tech | Location | Role |
+|---|---|---|---|
+| Frontend | TypeScript / HTML / CSS / Chart.js | `index.html`, `src/`, `css/`, `js/` | Two-tab UI (Record / Analysis). Hosted on GitHub Pages, no auth required |
+| Analysis Engine | Python (pandas) | `tools/analysis/` | Generates weekly summaries from data.json (correlation as hypothesis, with n-count and caveats) |
+| Sync Tool | Go | `tools/sync-go/` | Schema validation and sync to a private repo (dry-run by default) |
+| Validation & Encryption | Rust / WASM | `tools/wasm-crypto/` | Record validation and local encryption with Argon2id + AES-256-GCM (Phase 4) |
+| Automation | Shell / Lua | `scripts/`, `rules/` | Batch execution: validate, analyze, commit. Conditional branching via external rule files |
+| Native Extension | Kotlin (future) | `docs/future-kotlin.md` | Mobile expansion notes only |
+
+## Usage
+
+### Record Tab
+
+Select a date and enter your daily log. The form covers:
+
+- **Life & Environment** — Schedule type, location (out/home/mixed), weather, notes
+- **Healthcare** — Weight, sleep hours, bathing, meals (breakfast/lunch/dinner), condition score (1–5), mental score (1–5), stress level (1–5)
+- **Beauty & Self-care** — Face wash, skincare, teeth brushing (morning/night), water intake, caffeine, snacks
+- **Exercise & Spending** — Exercise details, ab workout video selection (A–G), long walks, rough spending with tags
+
+Same-date entries are overwritten. You can edit or delete any record from the list below the form.
+
+### Analysis Tab
+
+- **Summary cards** — Total days recorded, recording rate, average sleep, weight change (first to last)
+- **Charts** — Weight trend (line), sleep duration (bar), condition & mental scores (line), sleep vs. next-day condition (scatter with Pearson r)
+- **Day-type summary table** — Average sleep, condition, and mental scores grouped by schedule type
+
+### Data Import/Export
+
+Export or import in `data.json` schema v1 format. Same-date records are overwritten on import.
+
+## Data Safety Rules (Critical)
+
+1. **Never put real data in this public repository.** Only code and dummy samples belong here.
+2. Real `data.json` files go in a private repository or a non-public local folder (also excluded via `.gitignore`).
+3. No tokens or credentials are embedded in the code. The sync tool's push authentication relies on the user's own git configuration.
+4. All sample data (the "Load dummy sample" button on the frontend, `tools/analysis/sample-data.json`) contains clearly dummy values and is not real data.
+
+## Development
+
+```bash
+# Frontend (compile TypeScript)
+npx -p typescript tsc -p tsconfig.json   # src/main.ts -> js/main.js
+
+# Local preview
+python3 -m http.server 8000              # http://localhost:8000/
+
+# Python analysis (verify with sample data)
+python3 tools/analysis/analyze.py tools/analysis/sample-data.json --out /tmp/lifelog-summary
+
+# Go sync (validation + dry-run by default)
+cd tools/sync-go && go run . --data /path/to/data.json --repo /path/to/private-repo
+
+# Automation (batch: validate -> analyze -> commit; dry-run by default)
+LIFELOG_DATA=/path/to/data.json LIFELOG_REPO=/path/to/private-repo scripts/auto-commit.sh
+```
+
+## Coding Conventions
+
+- No inline CSS or inline JS — external files only
+- CSS uses `css/tokens.css` + `css/base.css`, unified via `@import` in `css/style.css`
+- BEM naming, semantic HTML, WCAG 2.2 AA considerations (visible focus, contrast, label association)
+
+## Phase Status
+
+- Phase 0: Schema v1 finalized, safety design (data path = JSON I/O + browser-only storage)
+- Phase 1: Frontend MVP complete (this repository)
+- Phase 2: Python analysis engine complete (verified with sample data)
+- Phase 3: Go sync tool included (dry-run by default, target configurable)
+- Phase 4: Rust/WASM core prepared. Frontend integration design in `docs/phase4-wasm.md`
+- Phase 5: Shell/Lua automation included. Kotlin is future-outlook notes only
+
+## License
+
+MIT

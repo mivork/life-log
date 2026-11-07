@@ -1,0 +1,1415 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "date": "2026-10-01",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 60.0,
+        "sleep_hours": 5.4,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 1
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1100,
+        "caffeine_cups": 0.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": "A",
+        "long_walk": true
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 800
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-01T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-02",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.92,
+        "sleep_hours": 6.0,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 2
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1250,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1200
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-02T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-03",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.84,
+        "sleep_hours": 6.6,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 3
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1400,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1600
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-03T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-04",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.76,
+        "sleep_hours": 7.2,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 4
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1550,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 2000
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-04T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-05",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.68,
+        "sleep_hours": 7.8,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 5
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1700,
+        "caffeine_cups": 1.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 2400
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-05T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-06",
+      "context": {
+        "day_type": "work",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.6,
+        "sleep_hours": 5.4,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": false
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 1
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1850,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 800
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-06T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-07",
+      "context": {
+        "day_type": "off",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.52,
+        "sleep_hours": 6.4,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 2
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1100,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 1200
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-07T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-08",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.44,
+        "sleep_hours": 6.6,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 3
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1250,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": "A",
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1600
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-08T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-09",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.36,
+        "sleep_hours": 7.2,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 4
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1400,
+        "caffeine_cups": 2.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": true
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 2000
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-09T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-10",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.28,
+        "sleep_hours": 7.8,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 5
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1550,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 2400
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-10T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-11",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.2,
+        "sleep_hours": 5.4,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 1
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1700,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 800
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-11T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-12",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.12,
+        "sleep_hours": 6.0,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": false
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 2
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1850,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1200
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-12T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-13",
+      "context": {
+        "day_type": "work",
+        "location": "out",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 59.04,
+        "sleep_hours": 6.6,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 3
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1100,
+        "caffeine_cups": 0.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 1600
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-13T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-14",
+      "context": {
+        "day_type": "off",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.96,
+        "sleep_hours": 7.6,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 4
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1250,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 2000
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-14T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-15",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.88,
+        "sleep_hours": 7.8,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 5
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1400,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": "A",
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 2400
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-15T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-16",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.8,
+        "sleep_hours": 5.4,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 1
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1550,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 800
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-16T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-17",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.72,
+        "sleep_hours": 6.0,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 2
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1700,
+        "caffeine_cups": 1.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": true
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1200
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-17T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-18",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.64,
+        "sleep_hours": 6.6,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": false
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 3
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1850,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1600
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-18T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-19",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.56,
+        "sleep_hours": 7.2,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 4
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1100,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 2000
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-19T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-20",
+      "context": {
+        "day_type": "work",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.48,
+        "sleep_hours": 7.8,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 5
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1250,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 2400
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-20T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-21",
+      "context": {
+        "day_type": "off",
+        "location": "out",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.4,
+        "sleep_hours": 5.8,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 1
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1400,
+        "caffeine_cups": 2.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 800
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-21T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-22",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.32,
+        "sleep_hours": 6.0,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 2
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1550,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": "A",
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 1200
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-22T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-23",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.24,
+        "sleep_hours": 6.6,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 3
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1700,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1600
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-23T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-24",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.16,
+        "sleep_hours": 7.2,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": false
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 4
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1850,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 2000
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-24T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-25",
+      "context": {
+        "day_type": "school",
+        "location": "out",
+        "weather": "rain",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.08,
+        "sleep_hours": 7.8,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 2,
+        "mental_score": 4,
+        "stress_score": 5
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1100,
+        "caffeine_cups": 0.0,
+        "snack": true
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": true
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 2400
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-25T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-26",
+      "context": {
+        "day_type": "online",
+        "location": "home",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 58.0,
+        "sleep_hours": 5.4,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 3,
+        "mental_score": 5,
+        "stress_score": 1
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1250,
+        "caffeine_cups": 1.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 800
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-26T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-27",
+      "context": {
+        "day_type": "work",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 57.92,
+        "sleep_hours": 6.0,
+        "bath": true,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 4,
+        "mental_score": 2,
+        "stress_score": 2
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": true,
+        "teeth": {
+          "morning": true,
+          "night": false
+        },
+        "water_ml": 1400,
+        "caffeine_cups": 2.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": true,
+        "exercise_detail": "ダミー運動",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費"
+        ],
+        "rough_total_yen": 1200
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-27T22:00:00+09:00"
+    },
+    {
+      "date": "2026-10-28",
+      "context": {
+        "day_type": "off",
+        "location": "out",
+        "weather": "sunny",
+        "note": "ダミー"
+      },
+      "health": {
+        "weight_kg": 57.84,
+        "sleep_hours": 7.0,
+        "bath": false,
+        "meals": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true
+        },
+        "condition_score": 5,
+        "mental_score": 3,
+        "stress_score": 3
+      },
+      "care": {
+        "face_wash": true,
+        "skincare": false,
+        "teeth": {
+          "morning": true,
+          "night": true
+        },
+        "water_ml": 1550,
+        "caffeine_cups": 0.0,
+        "snack": false
+      },
+      "activity": {
+        "exercise": false,
+        "exercise_detail": "",
+        "abs_video": null,
+        "long_walk": false
+      },
+      "spending": {
+        "tags": [
+          "食費",
+          "日用品"
+        ],
+        "rough_total_yen": 1600
+      },
+      "diary": {
+        "reflection": "ダミーサンプル記録です（実データではありません）",
+        "mood_memo": "ダミー"
+      },
+      "updated_at": "2026-10-28T22:00:00+09:00"
+    }
+  ]
+}

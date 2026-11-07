@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "engine": "pandas",
+  "record_count": 28,
+  "period": {
+    "from": "2026-10-01",
+    "to": "2026-10-28",
+    "days": 28
+  },
+  "coverage_rate": 1.0,
+  "avg_sleep_hours": 6.59,
+  "weight_change_kg": -2.16,
+  "avg_condition": 3.5,
+  "avg_mental": 3.5,
+  "avg_stress": 2.89,
+  "avg_caffeine_cups": 0.96,
+  "avg_water_ml": 1453.57,
+  "exercise_rate": 0.5,
+  "by_day_type": {
+    "online": {
+      "days": 12,
+      "avg_sleep_hours": 6.65,
+      "avg_condition": 3.5,
+      "avg_mental": 3.5
+    },
+    "school": {
+      "days": 8,
+      "avg_sleep_hours": 6.53,
+      "avg_condition": 3.5,
+      "avg_mental": 3.5
+    },
+    "work": {
+      "days": 4,
+      "avg_sleep_hours": 6.45,
+      "avg_condition": 3.5,
+      "avg_mental": 3.5
+    },
+    "off": {
+      "days": 4,
+      "avg_sleep_hours": 6.7,
+      "avg_condition": 3.5,
+      "avg_mental": 3.5
+    }
+  },
+  "correlations": [
+    {
+      "name": "睡眠時間 × 翌日の体調スコア",
+      "n": 27,
+      "note": "連続した2日がそろったペアのみ対象。",
+      "r": -0.08,
+      "reading": "弱い負の相関が見られます（仮説）。因果関係を断定するものではありません。"
+    },
+    {
+      "name": "睡眠時間 × 同日のメンタルスコア",
+      "n": 28,
+      "note": "同日同士の相関。",
+      "r": -0.08,
+      "reading": "弱い負の相関が見られます（仮説）。因果関係を断定するものではありません。"
+    },
+    {
+      "name": "カフェイン杯数 × 同日の睡眠時間",
+      "n": 28,
+      "note": "摂取時刻は記録していないため、時刻要因は分離できません。",
+      "r": -0.08,
+      "reading": "弱い負の相関が見られます（仮説）。因果関係を断定するものではありません。"
+    },
+    {
+      "name": "運動有無 × メンタルスコア（群間平均）",
+      "n": 28,
+      "exercise_days_avg_mental": 3.0,
+      "rest_days_avg_mental": 4.0,
+      "reading": "運動した日としない日のメンタル平均の差は観察材料です（仮説）。体調が良いから運動できた、という逆向きの説明もあり得ます。"
+    }
+  ],
+  "flags": [
+    {
+      "rule": "recording_gap_4d",
+      "date": "2026-10-28",
+      "message": "最終記録から10日あいています。忙しい日種別では記録が薄くなるのは自然です。再開は1項目だけでも十分です。"
+    }
+  ],
+  "caveats": [
+    "相関は因果関係を示しません。すべて仮説として扱ってください。",
+    "単日の値で断定せず、7日・28日の傾向で読んでください。",
+    "このサマリーは医療的診断ではありません。"
+  ]
+}

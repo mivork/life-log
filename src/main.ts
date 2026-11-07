@@ -865,6 +865,18 @@ function pearson(xs: number[], ys: number[]): number | null {
   return num / Math.sqrt(dx * dy);
 }
 
+// グラフの色は tokens.css の --chart-* を読み、ダークモードにも連動させる
+function chartColors(): { c1: string; c2: string; grid: string; tick: string } {
+  const cs = getComputedStyle(document.documentElement);
+  const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    c1: cs.getPropertyValue("--chart-1").trim() || "#5e6ad2",
+    c2: cs.getPropertyValue("--chart-2").trim() || "#9aa3b2",
+    grid: dark ? "rgba(255, 255, 255, 0.06)" : "rgba(0, 0, 0, 0.05)",
+    tick: dark ? "#9aa3b2" : "#6f6e69",
+  };
+}
+
 function makeChart(id: string, config: any): void {
   if (typeof Chart === "undefined") return;
   if (charts[id]) charts[id].destroy();
@@ -909,6 +921,12 @@ function renderAnalysis(): void {
   }
 
   const labels = list.map((r) => r.date);
+  const cc = chartColors();
+  const scaleBase = {
+    grid: { color: cc.grid },
+    ticks: { color: cc.tick },
+    border: { display: false },
+  };
   makeChart("chart-weight", {
     type: "line",
     data: {
@@ -917,13 +935,19 @@ function renderAnalysis(): void {
         {
           label: t("chart_weight_label"),
           data: list.map((r) => r.health.weight_kg),
-          borderColor: "#084c8d",
-          backgroundColor: "#084c8d",
+          borderColor: cc.c1,
+          backgroundColor: cc.c1,
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 3,
           spanGaps: true,
         },
       ],
     },
-    options: { responsive: true },
+    options: {
+      responsive: true,
+      scales: { x: scaleBase, y: scaleBase },
+    },
   });
   makeChart("chart-sleep", {
     type: "bar",
@@ -933,11 +957,14 @@ function renderAnalysis(): void {
         {
           label: t("chart_sleep_label"),
           data: list.map((r) => r.health.sleep_hours),
-          backgroundColor: "#0b6e4f",
+          backgroundColor: cc.c1,
         },
       ],
     },
-    options: { responsive: true },
+    options: {
+      responsive: true,
+      scales: { x: scaleBase, y: scaleBase },
+    },
   });
   makeChart("chart-scores", {
     type: "line",
@@ -947,20 +974,32 @@ function renderAnalysis(): void {
         {
           label: t("chart_condition_label"),
           data: list.map((r) => r.health.condition_score),
-          borderColor: "#084c8d",
-          backgroundColor: "#084c8d",
+          borderColor: cc.c1,
+          backgroundColor: cc.c1,
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 3,
           spanGaps: true,
         },
         {
           label: t("chart_mental_label"),
           data: list.map((r) => r.health.mental_score),
-          borderColor: "#8a5a00",
-          backgroundColor: "#8a5a00",
+          borderColor: cc.c2,
+          backgroundColor: cc.c2,
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 3,
           spanGaps: true,
         },
       ],
     },
-    options: { responsive: true, scales: { y: { min: 0, max: 5 } } },
+    options: {
+      responsive: true,
+      scales: {
+        x: scaleBase,
+        y: { ...scaleBase, min: 0, max: 5 },
+      },
+    },
   });
 
   // 睡眠 × 翌日の体調
@@ -977,18 +1016,22 @@ function renderAnalysis(): void {
         {
           label: t("chart_scatter_label"),
           data: pts,
-          backgroundColor: "#084c8d",
+          backgroundColor: cc.c1,
         },
       ],
     },
     options: {
       responsive: true,
       scales: {
-        x: { title: { display: true, text: t("chart_scatter_x") } },
+        x: {
+          ...scaleBase,
+          title: { display: true, text: t("chart_scatter_x"), color: cc.tick },
+        },
         y: {
+          ...scaleBase,
           min: 0,
           max: 5,
-          title: { display: true, text: t("chart_scatter_y") },
+          title: { display: true, text: t("chart_scatter_y"), color: cc.tick },
         },
       },
     },
@@ -1303,6 +1346,13 @@ function init(): void {
     if (target.files && target.files[0]) importJson(target.files[0]);
     target.value = "";
   });
+
+  // ダーク/ライト切替時に、表示中ならグラフの色を取り直す
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (!el<HTMLElement>("panel-analysis").hidden) renderAnalysis();
+    });
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {

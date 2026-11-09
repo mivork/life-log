@@ -1,5 +1,5 @@
 // LifeLog v2 service worker: network-first pages, cache-first hashed assets.
-const CACHE_NAME = "lifelog2-v3";
+const CACHE_NAME = "lifelog2-v4";
 self.addEventListener("install", (event) => {
   self.skipWaiting();
 });

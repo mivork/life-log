@@ -13,9 +13,11 @@ A privacy-first life logging web app that tracks your daily habits, health, and 
 
 ## Screenshots
 
-![Record tab](docs/images/record.png)
+![Records (demo data)](docs/images/records.png)
 
-![Analysis tab (dummy sample data)](docs/images/analysis.png)
+![Analysis (demo data)](docs/images/analysis.png)
+
+![Context — daily record form (demo data)](docs/images/context.png)
 
 ## Features
 

@@ -9,9 +9,11 @@
 
 ## スクリーンショット
 
-![記録タブ](../docs/images/record.png)
+![記録一覧（デモデータ）](../docs/images/records.png)
 
-![分析タブ（ダミーサンプル表示中）](../docs/images/analysis.png)
+![分析（デモデータ）](../docs/images/analysis.png)
+
+![生活・環境の入力（デモデータ）](../docs/images/context.png)
 
 ## 構成
 

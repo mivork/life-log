@@ -8,9 +8,11 @@
 
 ## 스크린샷
 
-![기록 탭](../docs/images/record.png)
+![기록 목록 (데모 데이터)](../docs/images/records.png)
 
-![분석 탭 (더미 샘플 데이터)](../docs/images/analysis.png)
+![분석 (데모 데이터)](../docs/images/analysis.png)
+
+![생활·환경 입력 (데모 데이터)](../docs/images/context.png)
 
 ## 주요 기능
 

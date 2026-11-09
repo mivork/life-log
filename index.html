@@ -18,8 +18,8 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="./assets/index-BKLzBzIV.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-dmK63Kaq.css">
+  <script type="module" crossorigin src="./assets/index-kYZvUCzk.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CvsCgIX5.css">
 </head>
 <body>
 <div class="layout">
@@ -125,7 +125,7 @@
                         </div>
                         <div>
                           <label for="f-hours" data-i18n="label_hours">時間 (h)</label>
-                          <input type="number" id="f-hours" name="hours" step="0.25" min="0" max="24" inputmode="decimal">
+                          <input type="number" id="f-hours" name="hours" step="any" min="0" max="24" inputmode="decimal">
                         </div>
                         <div>
                           <label for="f-location" data-i18n="label_location">主な居場所</label>
@@ -180,12 +180,14 @@
                             <option value="5">5</option>
                           </select>
                         </div>
+                          <p class="field-hint" data-i18n="hint_score">5 = とても良い 〜 1 = とても悪い</p>
                       </div>
                     </fieldset>
             </div>
             <div class="slide" data-slide-key="health">
             <fieldset id="section-health">
                       <legend data-i18n="fs_health">ヘルスケア</legend>
+                      <p class="field-hint" data-i18n="hint_score">5 = とても良い 〜 1 = とても悪い</p>
                       <div class="form-grid">
                         <div>
                           <label for="f-weight" data-i18n="label_weight">体重 (kg)</label>
@@ -203,6 +205,7 @@
                           <label for="f-stress" data-i18n="label_stress">ストレス度（1〜5）</label>
                           <input type="number" id="f-stress" name="stress_score" min="1" max="5" step="1" inputmode="numeric">
                         </div>
+                          <p class="field-hint" data-i18n="hint_stress">5 = とても強い 〜 1 = 弱い</p>
                       </div>
                     </fieldset>
             </div>
@@ -245,14 +248,6 @@
                         <div>
                           <label for="f-meal-dinner-memo" data-i18n="label_meal_memo">メモ（例: カップ麺）</label>
                           <input type="text" id="f-meal-dinner-memo" name="meal_dinner_memo">
-                        </div>
-                        <div>
-                          <label for="f-protein" data-i18n="label_protein">タンパク質を摂れた</label>
-                          <select id="f-protein" name="protein" data-tristate>
-                            <option value="" data-i18n="opt_empty">未入力</option>
-                            <option value="true" data-i18n="opt_yes">○</option>
-                            <option value="false" data-i18n="opt_no">×</option>
-                          </select>
                         </div>
                       </div>
                     </fieldset>
@@ -301,6 +296,10 @@
                           </select>
                         </div>
                         <div>
+                          <label for="f-skincare-memo" data-i18n="label_skincare_memo">スキンケアメモ（使ったもの）</label>
+                          <input type="text" id="f-skincare-memo" name="skincare_memo">
+                        </div>
+                        <div>
                           <label for="f-teeth-morning" data-i18n="label_teeth_morning">歯磨き（朝）</label>
                           <select id="f-teeth-morning" name="teeth_morning" data-tristate>
                             <option value="" data-i18n="opt_empty">未入力</option>
@@ -323,6 +322,10 @@
                         <div>
                           <label for="f-caffeine" data-i18n="label_caffeine">カフェイン (杯)</label>
                           <input type="number" id="f-caffeine" name="caffeine_cups" min="0" max="20" step="0.5" inputmode="decimal">
+                        </div>
+                        <div class="form-grid__full">
+                          <label for="f-drinks-memo" data-i18n="label_drinks_memo">飲み物メモ（何を飲んだか）</label>
+                          <input type="text" id="f-drinks-memo" name="drinks_memo">
                         </div>
                         <div>
                           <label for="f-snack" data-i18n="label_snack">間食</label>
@@ -380,6 +383,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
+                          <p class="field-hint" data-i18n="hint_pain">0 = なし 〜 3 = 強い</p>
                         <div>
                           <label for="f-long-walk" data-i18n="label_long_walk">長時間歩行</label>
                           <select id="f-long-walk" name="long_walk" data-tristate>
